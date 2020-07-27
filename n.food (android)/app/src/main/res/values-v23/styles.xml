@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="SplashScreen" parent="Theme.AppCompat.DayNight.NoActionBar">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="itemTextColor">@color/white</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:windowBackground">@color/green</item>
+        <item name="android:statusBarColor">@color/green</item>
+        <item name="android:navigationBarColor">@color/green</item>
+        <item name="android:windowLightStatusBar">false</item>
+    </style>
+
+    <style name="AppTheme" parent="Theme.AppCompat.DayNight.NoActionBar">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="itemTextColor">@color/white</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:windowBackground">@color/whitesmoke</item>
+        <item name="android:statusBarColor">@color/whitesmoke</item>
+        <item name="android:windowLightStatusBar">true</item>
+    </style>
+    <style name="ratingBar" parent="@android:style/Widget.RatingBar">
+        <item name="android:progressDrawable">@drawable/layout_rating_bar_full</item>
+        <item name="android:minHeight">24dip</item>
+        <item name="android:maxHeight">24dip</item>
+    </style>
+</resources>

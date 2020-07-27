@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/whitesmoke"
+    tools:context=".Homescreen.Homescreen">
+
+    <FrameLayout
+        android:id="@+id/container"
+        app:layout_constraintTop_toTopOf="@id/header"
+        app:layout_constraintBottom_toTopOf="@id/shadow"
+        android:layout_width="match_parent"
+        android:background="@color/whitesmoke"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_height="0dp"/>
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/header"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize">
+        <ImageView
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            android:layout_marginRight="10dp"
+            android:id="@+id/cart_click"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/icon_cart" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    <View
+        android:id="@+id/shadow"
+        android:layout_width="match_parent"
+        android:background="@drawable/view_shadow"
+        app:layout_constraintBottom_toTopOf="@id/navigation_view"
+        android:layout_height="1dp"/>
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/navigation_view"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="@color/colorPrimary"
+        app:menu="@menu/menu_bottom_navigation"
+        app:itemIconSize="25dp"
+        app:itemHorizontalTranslationEnabled="false"
+        app:itemIconTint="@color/bottom_item_foreground"
+        app:itemTextColor="@color/bottom_item_foreground"
+        app:labelVisibilityMode="labeled"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

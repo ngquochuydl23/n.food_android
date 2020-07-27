@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".Register.VerifyCode">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginHorizontal="20dp"
+        android:orientation="vertical">
+        <ImageView
+            android:layout_marginTop="?actionBarSize"
+            android:layout_gravity="center"
+            android:src="@drawable/illustration_verify"
+            android:layout_width="200dp"
+            android:layout_height="200dp"/>
+        <TextView
+            android:id="@+id/header_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:gravity="center"
+            android:text="OTP Verification"
+            android:textColor="@color/textColorPrimary"
+            android:textSize="25sp"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:gravity="center_horizontal"
+                android:text="OTP Has been sent to "
+                android:textColor="@color/gray"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:gravity="center_horizontal"
+                android:text="+84*******61"
+                android:textColor="@color/gray"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <com.goodiebag.pinview.Pinview
+            android:id="@+id/pinView"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_marginTop="20dp"
+            android:gravity="center_horizontal|center_vertical"
+            app:cursorVisible="false"
+            app:forceKeyboard="true"
+            app:inputType="number"
+            app:password="false"
+
+            app:textSize="4.5sp"
+            app:pinBackground="@drawable/layout_border_item"
+            app:pinHeight="45dp"
+            app:pinLength="6"
+            app:pinWidth="45dp" />
+
+        <TextView
+            android:id="@+id/errorCode"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="0dp"
+            android:layout_marginBottom="0dp"
+            android:textColor="@color/error"
+            android:textSize="13sp" />
+
+        <Button
+            android:id="@+id/submit_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/layout_circle_rectangle"
+            android:text="Submit"
+            android:textColor="@color/white" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/message"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="3dp">
+
+            <TextView
+                android:id="@+id/resend_message"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="0dp"
+                android:layout_marginBottom="0dp"
+                android:text="Don't receive the OTP?"
+                android:textColor="@color/gray"
+                android:textSize="14sp"
+                app:layout_constraintLeft_toLeftOf="parent" />
+
+            <TextView
+                android:id="@+id/resend_click"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="0dp"
+                android:layout_marginBottom="0dp"
+                android:text="RESEND CODE"
+                android:textColor="@color/green"
+                android:textSize="14sp"
+                app:layout_constraintLeft_toRightOf="@id/resend_message" />
+
+            <TextView
+                android:id="@+id/resend_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="0dp"
+                android:layout_marginBottom="0dp"
+                android:text="0:30"
+                android:textColor="@color/green"
+                android:textSize="14sp"
+                android:visibility="gone"
+                app:layout_constraintLeft_toRightOf="@id/resend_message" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>

@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white"
+    tools:context="com.nfood.nfood.Rate.RateDriver">
+    <include
+        android:id="@+id/header"
+        layout="@layout/layout_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+    </include>
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/driverAvatar"
+            android:layout_marginTop="10dp"
+            android:src="@drawable/profile"
+            android:layout_width="100dp"
+            android:layout_gravity="center"
+            android:layout_height="100dp"/>
+        <TextView
+            android:id="@+id/driverName"
+            android:layout_marginTop="10dp"
+            android:text="Vũ Hoàng Uyên Nhi"
+            android:gravity="center"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="@color/titleTextColor"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+        <com.willy.ratingbar.ScaleRatingBar
+            android:id="@+id/rate"
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="10dp"
+            app:srb_numStars="5"
+            app:srb_starWidth="30dp"
+            app:srb_starHeight="30dp"
+            app:srb_stepSize="0.5"
+            app:srb_isIndicator="false"
+            app:srb_clickable="true"
+            app:srb_scrollable="true"
+            app:srb_clearRatingEnabled="true"
+            app:srb_drawableEmpty="@drawable/icon_rated_unactive"
+            app:srb_drawableFilled="@drawable/icon_rated_active"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:padding="10dp"
+        android:layout_weight="1">
+        <EditText
+            android:background="@color/white"
+            android:id="@+id/enterReview"
+            android:textSize="15sp"
+            android:gravity="top"
+            android:textColor="@color/titleTextColor"
+            android:hint="Share your reviews herel. Your rating and review will be kept anonymous"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_marginVertical="10dp"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:id="@+id/skipButton"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center_vertical|right"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="5dp"
+            android:layout_weight="1"
+            android:background="@drawable/layout_border_rectangle"
+            android:text="Skip"
+            android:textColor="@color/green"
+            android:textStyle="normal" />
+
+        <Button
+
+            android:id="@+id/nextButton"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center_vertical|right"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="10dp"
+            android:layout_weight="1"
+            android:background="@drawable/layout_border_item"
+            android:backgroundTint="@color/green"
+            android:clipChildren="false"
+            android:text="@string/next"
+            android:textColor="@color/white"
+            android:textStyle="normal" />
+    </LinearLayout>
+</LinearLayout>

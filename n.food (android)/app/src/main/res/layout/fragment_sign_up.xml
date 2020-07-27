@@ -1,0 +1,129 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/whitesmoke"
+    tools:context="com.nfood.nfood.Register.SignUp">
+
+
+    <androidx.core.widget.NestedScrollView
+        android:paddingHorizontal="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_gravity="center"
+
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/enterFullname"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:background="@drawable/layout_border_item"
+                    android:hint="Enter Fullname"
+                    android:inputType="text"
+                    android:outlineSpotShadowColor="@color/gray"
+                    android:paddingLeft="10dp"
+                    android:textColor="@color/textColorPrimary"
+                    android:textSize="16sp" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/errorFullname"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/error"
+                android:textSize="13sp" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/enterPhoneNumber"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:background="@drawable/layout_border_item"
+                    android:hint="@string/phone_number"
+                    android:inputType="phone"
+                    android:outlineSpotShadowColor="@color/gray"
+                    android:paddingLeft="10dp"
+                    android:textColor="@color/textColorPrimary"
+                    android:textSize="16sp" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/errorPhoneNumber"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/error"
+                android:textSize="13sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/enterUsername"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:background="@drawable/layout_border_item"
+                    android:hint="Enter Email"
+                    android:inputType="text"
+                    android:outlineSpotShadowColor="@color/gray"
+                    android:paddingLeft="10dp"
+                    android:textColor="@color/textColorPrimary"
+                    android:textSize="16sp" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/errorUsername"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/error"
+                android:textSize="13sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/enterPassword"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:background="@drawable/layout_border_item"
+                    android:hint="Enter Password"
+                    android:inputType="textPassword"
+                    android:outlineSpotShadowColor="@color/gray"
+                    android:paddingLeft="10dp"
+                    android:textColor="@color/textColorPrimary"
+                    android:textSize="16sp" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/errorPassword"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/error"
+                android:textSize="13sp" />
+            <Button
+                android:id="@+id/signUpClick"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/layout_circle_rectangle"
+                android:text="Sign Up"
+                android:textColor="@color/white" />
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+</LinearLayout>

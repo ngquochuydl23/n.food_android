@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:background="@color/white"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="10dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/title_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:src="@drawable/icon_restaurant"
+            android:id="@+id/icon_restaurant"
+            android:layout_marginLeft="10dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_width="20dp"
+            android:layout_height="20dp"/>
+        <TextView
+            android:id="@+id/restaurantName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:layout_marginVertical="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginLeft="5dp"
+            app:layout_constraintLeft_toRightOf="@id/icon_restaurant"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:text="nameRestaurant"
+            android:textColor="@color/titleTextColor"
+            android:textSize="16sp" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    <View
+        app:layout_constraintTop_toBottomOf="@id/thumbnailClick"
+        android:layout_width="match_parent"
+        android:background="@drawable/view_shadow"
+        android:layout_height="1dp"/>
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_marginTop="1dp"
+        android:id="@+id/listProduct"
+        android:layout_marginBottom="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+</LinearLayout>

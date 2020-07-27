@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:background="@drawable/layout_border_item"
+    android:paddingVertical="10dp"
+    android:layout_marginHorizontal="10dp"
+    android:backgroundTint="@color/white"
+    android:gravity="center_horizontal"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <TextView
+        android:text="@string/found_driver"
+        android:gravity="center"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textColor="@color/titleTextColor"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/driverAvatar"
+        android:layout_marginTop="10dp"
+        android:src="@drawable/profile"
+        android:layout_width="100dp"
+        android:layout_height="100dp"/>
+    <TextView
+        android:id="@+id/driverName"
+        android:layout_marginTop="10dp"
+        android:text="Vũ Hoàng Uyên Nhi"
+        android:gravity="center"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textColor="@color/titleTextColor"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <com.willy.ratingbar.ScaleRatingBar
+        android:id="@+id/driverRated"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="10dp"
+        app:srb_numStars="5"
+        app:srb_starWidth="30dp"
+        app:srb_starHeight="30dp"
+        app:srb_stepSize="0.5"
+        app:srb_isIndicator="true"
+        app:srb_clickable="false"
+        app:srb_scrollable="false"
+        app:srb_clearRatingEnabled="true"
+        app:srb_drawableEmpty="@drawable/icon_rated_unactive"
+        app:srb_drawableFilled="@drawable/icon_rated_active"/>
+    <TextView
+        android:id="@+id/driverMotor"
+        android:text="49B1-407.41-Yamaha Exciter 150"
+        android:gravity="center"
+        android:textSize="16sp"
+        android:textColor="@color/titleTextColor"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+    <LinearLayout
+        android:id="@+id/rateAndReOrder"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp">
+
+        <Button
+            android:id="@+id/messenger"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center_vertical|right"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="5dp"
+            android:layout_weight="1"
+            android:background="@drawable/layout_border_rectangle"
+            android:text="Messenger"
+            android:textColor="@color/green"
+            android:textStyle="normal" />
+
+        <Button
+            android:id="@+id/call"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center_vertical|right"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="10dp"
+            android:layout_weight="1"
+            android:background="@drawable/layout_border_item"
+            android:backgroundTint="@color/green"
+            android:clipChildren="false"
+            android:text="Call"
+            android:textColor="@color/white"
+            android:textStyle="normal" />
+
+    </LinearLayout>
+</LinearLayout>

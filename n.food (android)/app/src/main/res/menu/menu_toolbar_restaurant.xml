@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/favouriteToolbar"
+        android:title="favourite"
+        app:showAsAction="always"
+        android:iconTint="@color/green"
+        android:icon="@drawable/icon_favourite_unactive" />
+    <item
+        android:id="@+id/moreToolbar"
+        android:title="more"
+        app:showAsAction="always"
+        android:iconTint="@color/green"
+        android:icon="@drawable/icon_more_vertical" />
+</menu>

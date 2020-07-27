@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    tools:context=".Food.DetailFood">
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_weight="1"
+        android:layout_height="0dp">
+        <com.google.android.material.appbar.AppBarLayout
+            android:id="@+id/appBarLayout"
+            android:fitsSystemWindows="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <com.google.android.material.appbar.CollapsingToolbarLayout
+                android:id="@+id/collapseToolbar"
+                app:contentScrim="@color/white"
+                app:scrimAnimationDuration="600"
+                app:layout_scrollFlags="scroll|exitUntilCollapsed|enterAlwaysCollapsed"
+                app:expandedTitleTextAppearance="@android:color/transparent"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:id="@+id/image"
+                            android:layout_width="0dp"
+                            android:layout_height="0dp"
+                            android:scaleType="centerCrop"
+                            android:background="@drawable/layout_input"
+                            android:backgroundTint="@color/white"
+                            app:layout_constraintDimensionRatio="H,1:1"
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            app:layout_constraintRight_toRightOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="-10dp"
+                        android:paddingBottom="10dp"
+                        android:orientation="vertical"
+                        android:background="@drawable/layout_border_top">
+
+                        <TextView
+                            android:id="@+id/title"
+                            android:layout_width="match_parent"
+                            android:layout_weight="4"
+                            android:layout_height="wrap_content"
+                            android:layout_marginHorizontal="10dp"
+                            android:layout_marginTop="10dp"
+                            android:ellipsize="end"
+                            android:textStyle="bold"
+                            android:text="Gongcha Okinawa"
+                            android:textColor="@color/titleTextColor"
+                            android:textSize="18sp"
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            app:layout_constraintRight_toRightOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+                        <LinearLayout
+                            android:orientation="vertical"
+                            android:layout_weight="1"
+                            android:layout_marginTop="5dp"
+                            android:layout_width="match_parent"
+                            android:layout_marginHorizontal="10dp"
+                            android:gravity="left"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                android:id="@+id/price"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="60.000đ"
+                                android:textColor="@color/green"
+                                android:textSize="22sp"
+                                android:textStyle="bold" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+                <androidx.appcompat.widget.Toolbar
+                    android:id="@+id/toolbar"
+                    app:navigationIcon="@drawable/icon_back"
+                    app:layout_collapseMode="pin"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_marginRight="60dp"
+                        android:layout_height="match_parent">
+                        <TextView
+                            android:id="@+id/collapseTitle"
+                            android:text="Gongcha Okinawa"
+                            android:layout_gravity="center_horizontal"
+                            android:maxLines="1"
+                            android:ellipsize="end"
+                            android:textColor="@color/titleTextColor"
+                            android:textSize="@dimen/tilte_activity"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+                    </LinearLayout>
+                </androidx.appcompat.widget.Toolbar>
+
+            </com.google.android.material.appbar.CollapsingToolbarLayout>
+
+        </com.google.android.material.appbar.AppBarLayout>
+        <androidx.core.widget.NestedScrollView
+            android:id="@+id/nestedScrollView"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior"
+            android:layout_width="match_parent"
+            android:overScrollMode="always"
+            android:scrollbarStyle="insideInset"
+            android:layout_height="match_parent">
+            <LinearLayout
+                android:orientation="vertical"
+
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:paddingHorizontal="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:text="Ingredients"
+                        android:textSize="18sp"
+                        android:textColor="@color/titleTextColor"
+                        android:textStyle="bold"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:lineSpacingExtra="10sp"
+                        android:paddingLeft="10dp"
+                        android:layout_marginTop="5dp"
+                        android:text="Trà sữa, trân châu, kem"
+                        android:textColor="@color/gray"
+                        android:textSize="16sp" />
+                </LinearLayout>
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/listOption"
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:text="Note Merchant"
+                        android:textSize="18sp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginLeft="10dp"
+                        android:textColor="@color/titleTextColor"
+                        android:textStyle="bold"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+
+                    <EditText
+                        android:background="@color/white"
+                        android:id="@+id/enterNote"
+                        android:textSize="15sp"
+                        android:layout_marginLeft="10dp"
+                        android:cursorVisible="true"
+                        android:gravity="top"
+                        android:layout_marginTop="5dp"
+                        android:nestedScrollingEnabled="false"
+                        android:minHeight="50dp"
+                        android:textColor="@color/titleTextColor"
+                        android:hint="Your note"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_marginVertical="10dp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                    <Button
+                        android:id="@+id/decreaseClick"
+                        android:layout_width="40dp"
+                        android:layout_weight="1"
+                        android:text="-"
+                        android:textSize="25sp"
+                        android:textColor="@color/green"
+                        android:background="@drawable/layout_border_rectangle"
+                        android:layout_height="40dp"/>
+                    <TextView
+                        android:id="@+id/numberItem"
+                        android:text="0"
+                        android:textSize="20sp"
+                        android:textColor="@color/titleTextColor"
+                        android:textStyle="bold"
+                        android:gravity="center"
+                        android:layout_width="80dp"
+                        android:layout_height="match_parent"/>
+                    <Button
+                        android:layout_width="40dp"
+                        android:layout_weight="1"
+                        android:text="+"
+                        android:id="@+id/increaseClick"
+                        android:gravity="center|center_vertical"
+                        android:textSize="25sp"
+                        android:textColor="@color/green"
+                        android:background="@drawable/layout_border_rectangle"
+                        android:layout_height="40dp"/>
+                </LinearLayout>
+            </LinearLayout>
+        </androidx.core.widget.NestedScrollView>
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+    <Button
+        android:id="@+id/addCartClick"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:background="@drawable/layout_circle_rectangle"
+        android:text="@string/add_to_cart"
+        android:textColor="@color/white" />
+</LinearLayout>

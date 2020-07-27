@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/whitesmoke"
+    tools:context=".Homescreen.Profile">
+
+    <TextView
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize"
+        android:background="@color/white"
+        android:fontFamily="@font/sf_ui_display_regular"
+        android:gravity="center"
+        android:textColor="@color/titleTextColor"
+        android:textSize="@dimen/tilte_activity"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@drawable/view_shadow"
+        app:layout_constraintTop_toBottomOf="@id/header" />
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/header">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/edit_profile_click"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="10dp"
+                android:background="@color/white"
+                android:paddingRight="10dp">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/avatar"
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:layout_margin="10dp"
+                    android:src="@drawable/profile"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="5dp"
+                    android:text="Name"
+                    android:textColor="@color/titleTextColor"
+                    android:textSize="20sp"
+                    app:layout_constraintBottom_toTopOf="@id/edit_profile"
+                    app:layout_constraintLeft_toRightOf="@id/avatar"
+                    app:layout_constraintTop_toTopOf="@id/avatar" />
+
+                <TextView
+                    android:id="@+id/edit_profile"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="3dp"
+                    android:text="Edit Account"
+                    android:textColor="@color/textColorPrimary"
+                    android:textSize="15sp"
+                    app:layout_constraintLeft_toRightOf="@id/avatar"
+                    app:layout_constraintTop_toBottomOf="@id/name" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <Button
+                android:id="@+id/sign_in_click"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:background="@drawable/layout_circle_rectangle"
+                android:text="@string/register"
+                android:textColor="@color/white" />
+
+            <TextView
+                android:id="@+id/my_order_click"
+                style="@style/settingsText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/icon_purchases"
+                android:text="@string/my_order" />
+
+            <!--  <TextView
+                  android:id="@+id/my_voucher_click"
+                  style="@style/settingsText"
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:drawableLeft="@drawable/icon_my_voucher"
+                  android:text="@string/my_voucher" />-->
+
+            <TextView
+                android:id="@+id/my_favourite_click"
+                style="@style/settingsText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/icon_favourite_unactive"
+                android:text="@string/favourite" />
+
+            <TextView
+                android:id="@+id/payment_click"
+                style="@style/settingsText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/icon_payment"
+                android:text="@string/payment" />
+
+            <TextView
+                android:id="@+id/address_click"
+                style="@style/settingsText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/icon_marker"
+                android:text="@string/address" />
+
+
+            <TextView
+                android:id="@+id/for_seller_click"
+                style="@style/settingsText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@color/white"
+                android:drawableLeft="@drawable/icon_restaurant"
+                android:text="@string/for_seller" />
+
+            <TextView
+                android:id="@+id/for_driver_click"
+                style="@style/settingsText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:background="@color/white"
+                android:drawableLeft="@drawable/icon_delivery"
+                android:text="@string/for_driver" />
+
+            <TextView
+                android:id="@+id/policy_click"
+                style="@style/settingsText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@color/white"
+                android:drawableLeft="@drawable/icon_policy"
+                android:shadowColor="@color/gray"
+                android:text="@string/user_policy" />
+
+            <TextView
+                android:id="@+id/setting_click"
+                style="@style/settingsText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:background="@color/white"
+                android:drawableLeft="@drawable/icon_setting"
+                android:text="@string/setting" />
+
+            <TextView
+                android:id="@+id/aboutNFoodClick"
+                style="@style/settingsText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:drawableLeft="@drawable/icon_about"
+                android:text="@string/about_nfood" />
+
+            <Button
+                android:id="@+id/sign_out_click"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:background="@drawable/layout_border_rectangle"
+                android:text="@string/sign_out"
+                android:textColor="@color/green" />
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

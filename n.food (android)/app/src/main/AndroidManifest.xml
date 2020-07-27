@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.nfood.nfood">
+
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:networkSecurityConfig="@xml/network_security_config"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".Messenger.Messenger"></activity>
+        <activity
+            android:name=".Rate.RateDriver" />
+        <activity
+            android:name=".Profile.Setting.UpdatePassword"
+            android:label="@string/update_password"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".Homescreen.ViewMore" />
+        <activity
+            android:name=".Cart.FindDriver" />
+        <activity
+            android:name=".Cart.SelectVoucher" />
+        <activity
+            android:name=".Cart.SelectPayment" />
+        <activity
+            android:name=".Profile.MyVoucher.DetailVoucher"
+            android:label="@string/detail_voucher" />
+        <activity
+            android:name=".Profile.Payment.Payment"
+            android:label="@string/payment" />
+        <activity
+            android:name=".Profile.NFoodCoin.NFoodCoin"
+            android:label="@string/nfood_coin" />
+        <activity
+            android:name=".Profile.Setting.Setting"
+            android:label="@string/setting" />
+        <activity
+            android:name=".Profile.Policy.UserPolicy"
+            android:label="@string/user_policy" />
+        <activity
+            android:name=".Profile.AboutNFood.AboutNFood"
+            android:label="@string/about_nfood" />
+        <activity
+            android:name=".Profile.MyPurchases.OrderDetail"
+            android:label="@string/order_detail" />
+        <activity android:name=".Homescreen.SearchResult" />
+        <activity
+            android:name=".Profile.MyVoucher.MyVoucher"
+            android:label="@string/my_voucher" />
+        <activity
+            android:name=".Cart.SelectAddress"
+            android:label="@string/select_address" />
+        <activity
+            android:name=".Profile.Address.AddEditAddress"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".Profile.Address.Address"
+            android:label="@string/my_address" />
+        <activity
+            android:name=".Cart.CheckOut"
+            android:label="@string/check_out"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".Food.DetailFood"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".Notification.NotificationDetail" />
+        <activity
+            android:name=".Profile.MyPurchases.MyPurchases"
+            android:label="@string/my_order" />
+        <activity
+            android:name=".Profile.UserInformation.UserInformation"
+            android:label="@string/edit_account"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".Restaurant.Restaurant" />
+        <activity
+            android:name=".Homescreen.Search"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".Homescreen.CategoryDetail" />
+        <activity
+            android:name=".Cart.Cart"
+            android:label="@string/cart" />
+        <activity
+            android:name=".Register.Register"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".Splashscreen"
+            android:theme="@style/SplashScreen">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".Introduce.Introscreen" />
+        <activity android:name=".Homescreen.Homescreen" />
+
+        <service
+            android:name=".PushNotification.PushNotificationService"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+        <meta-data
+            android:name="com.facebook.sdk.ApplicationId"
+            android:value="@string/facebook_app_id" />
+
+        <activity
+            android:name="com.facebook.FacebookActivity"
+            android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"
+            android:label="@string/app_name" />
+        <activity
+            android:name="com.facebook.CustomTabActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data android:scheme="@string/fb_login_protocol_scheme" />
+            </intent-filter>
+        </activity>
+
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
+    </application>
+
+</manifest>

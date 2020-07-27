@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/thumbnailClick"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardview"
+            app:cardBackgroundColor="@color/white"
+            app:layout_constraintDimensionRatio="H,1:1"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:layout_margin="10dp"
+            android:background="@drawable/layout_border_item"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            app:cardCornerRadius="10dp">
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <ImageView
+                    android:id="@+id/productImage"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent" />
+                <LinearLayout
+                    android:id="@+id/isSoldOut"
+                    android:background="#80000000"
+                    android:layout_width="match_parent"
+                    android:gravity="center"
+                    android:visibility="gone"
+                    android:layout_height="match_parent">
+                    <TextView
+                        android:text="Sold out"
+                        android:textSize="16sp"
+                        android:textColor="@color/whitesmoke"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+                </LinearLayout>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:id="@+id/productName"
+            android:layout_marginLeft="10dp"
+            app:layout_constraintTop_toTopOf="@+id/cardview"
+            android:textColor="@color/titleTextColor"
+            android:textSize="17sp"
+            app:layout_constraintLeft_toRightOf="@id/cardview"
+            android:text="nameProduct"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:id="@+id/productPrice"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="8dp"
+            android:text="productPrice"
+            android:gravity="left"
+            android:layout_marginLeft="10dp"
+            android:textColor="@color/titleTextColor"
+            android:textSize="17sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginBottom="10dp"
+            app:layout_constraintLeft_toRightOf="@id/cardview"
+            app:layout_constraintRight_toRightOf="parent" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    <View
+        app:layout_constraintTop_toBottomOf="@id/thumbnailClick"
+        android:layout_width="match_parent"
+        android:background="@drawable/view_shadow"
+        android:layout_height="1dp"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

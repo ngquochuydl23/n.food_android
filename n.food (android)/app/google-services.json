@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "594756187768",
+    "firebase_url": "https://nfood-1590500450938.firebaseio.com",
+    "project_id": "nfood-1590500450938",
+    "storage_bucket": "nfood-1590500450938.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:594756187768:android:976e4f8f9c048bce8a5f8d",
+        "android_client_info": {
+          "package_name": "com.nsolution.nfood"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "594756187768-66iujjacj6vghkjbmtrnn9hq62b4q6vl.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.nsolution.nfood",
+            "certificate_hash": "a6f451cc296e7061cbac5fcb37628d62f2cdd238"
+          }
+        },
+        {
+          "client_id": "594756187768-c884ifvh2uq13pjh5hrgrd8hult0l588.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDZuf6LOpaeR8wDu07SR69RxTN4lU_zMSI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "594756187768-c884ifvh2uq13pjh5hrgrd8hult0l588.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
